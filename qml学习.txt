@@ -1,2 +1,18 @@
 ﻿只读函数
 容器
+常引用
+QML引擎engine
+ QML 运行时工具 - qmlscene
+
+任何的 QObject 派生类都可以使用 Q_PROPERTY() 宏来指定属性。属性是类的数据成员，具有关联的 READ 读取函数以及可选的 WRITE 写入函数。
+
+C++访问QML
+
+同样，在C++中也可以访问QML中的属性、函数和信号。
+
+在C++中加载QML文件可以用QQmlComponent或QQuickView，然后就可以在C++中访问QML对象了。QQuickView提供了一个显示用户界面的窗口，而QQmlComponent没有。
+
+QQuickView::rootObject()返回了组件实例，是一个有用的函数。前面的例子中已经使用过QQuickView了
+其实他就是对它的内部布局进行管理，而定位器只能定位，并不能进行管理。
+
+
